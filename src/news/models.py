@@ -51,4 +51,4 @@ class Article(models.Model):
         super().save(*args, **kwargs)
     
     def get_absolute_url(self):
-        return reverse("news:article_detail", kwargs={"slug": self.slug})
+        return reverse('news:article_detail', args=[self.slug])

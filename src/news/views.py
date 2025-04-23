@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
+from django.db.models import Q
 from .models import Article, Category
 
 
@@ -41,3 +42,16 @@ class ArticleDetailView(DetailView):
             status="published"
         ).order_by("-published_date")[:5]
         return context
+
+
+def search_articles(request):
+    query = request.GET.get('q', '')
+    articles = Article.objects.filter(
+        Q(title__icontains=query) | Q(content__icontains=query)
+    ) if query else Article.objects.none()
+    return render(request, 'news/search_results.html', {'articles': articles, 'query': query})
+
+
+def article_detail(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    return render(request, 'news/article_detail.html', {'article': article})

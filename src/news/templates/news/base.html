@@ -63,6 +63,34 @@
             border-color: var(--color-primary);
         }
         
+        .search-form {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        
+        .search-form input[type="text"] {
+            padding: 0.5rem;
+            border: 1px solid var(--color-secondary);
+            border-radius: 4px;
+            background-color: var(--color-dark-lighter);
+            color: var(--color-text);
+        }
+        
+        .search-form button {
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+            border: none;
+            background-color: var(--color-primary);
+            color: var(--color-black);
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .search-form button:hover {
+            background-color: var(--color-secondary);
+        }
+        
         /* Layout Component */
         .layout {
             display: flex;
@@ -167,6 +195,10 @@
                 <li class="nav__item"><a href="{% url 'news:home' %}" class="nav__link">Home</a></li>
                 <li class="nav__item"><a href="{% url 'admin:index' %}" class="nav__link">Admin</a></li>
             </ul>
+            <form action="{% url 'news:search_articles' %}" method="get" class="search-form">
+                <input type="text" name="q" placeholder="Search articles..." value="{{ request.GET.q|default:'' }}">
+                <button type="submit">🔍</button>
+            </form>
         </nav>
     </header>
     

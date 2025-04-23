@@ -8,5 +8,8 @@ urlpatterns = [
     path("", views.ArticleListView.as_view(), name="home"),
     
     # Article detail page
-    path("article/<slug:slug>/", views.ArticleDetailView.as_view(), name="article_detail"),
+    path("article/<slug:slug>/", views.article_detail, name="article_detail"),
+
+    # Search functionality
+    path("search/", views.search_articles, name="search_articles"),
 ]
