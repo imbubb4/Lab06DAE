@@ -5,8 +5,9 @@ Un portal de noticias desarrollado con Django que permite gestionar categorías,
 ---
 ## 🤝 Integrantes:
 
-Erik Campos
-Adrian Heredia
+-Erik Campos
+-Adrian Heredia
+-Joel Gutierrez
 
 ## 🚀 Características
 
