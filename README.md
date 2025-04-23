@@ -86,19 +86,6 @@ news_portal/
 
 ---
 
-## 📸 Capturas de Pantalla
-
-### Página Principal
-![Página Principal](https://via.placeholder.com/800x400?text=Página+Principal)
-
-### Detalle de Artículo
-![Detalle de Artículo](https://via.placeholder.com/800x400?text=Detalle+de+Artículo)
-
-### Búsqueda de Artículos
-![Búsqueda de Artículos](https://via.placeholder.com/800x400?text=Búsqueda+de+Artículos)
-
----
-
 ## 📋 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
